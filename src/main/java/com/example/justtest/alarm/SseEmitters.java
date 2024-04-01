@@ -1,5 +1,6 @@
 package com.example.justtest.alarm;
 
+import com.example.justtest.Repository;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -13,6 +14,11 @@ import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 public class SseEmitters {
   private static final AtomicLong counter = new AtomicLong();
   private final List<SseEmitter> emitters = new CopyOnWriteArrayList<>();
+  private final Repository repository;
+
+  public SseEmitters(Repository repository) {
+    this.repository = repository;
+  }
 
   SseEmitter add(SseEmitter emitter) {
     this.emitters.add(emitter);
@@ -33,9 +39,10 @@ public class SseEmitters {
     long count = counter.incrementAndGet();
     emitters.forEach(emitter -> {
       try {
+        String a = repository.findById(count).get().getDescription();
         emitter.send(SseEmitter.event()
             .name("count")
-            .data(count));
+            .data(a));
       } catch (IOException e) {
         throw new RuntimeException(e);
       }

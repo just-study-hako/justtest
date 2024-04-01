@@ -30,6 +30,19 @@ public class AlarmController {
     }
     return ResponseEntity.ok(emitter);
   }
+  @GetMapping(value = "/connect1", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
+  public ResponseEntity<SseEmitter> connect1() {
+    SseEmitter emitter1 = new SseEmitter();
+    sseEmitters.add(emitter1);
+    try {
+      emitter1.send(SseEmitter.event()
+          .name("connect")  // 해당 이벤트의 이름 지점
+          .data("connected!")); // 503 에러 방지를 위한 더미 데이터
+    } catch (IOException e) {
+      throw new RuntimeException(e);
+    }
+    return ResponseEntity.ok(emitter1);
+  }
   @PostMapping("/count")
   public ResponseEntity<Void> count() {
     sseEmitters.count();

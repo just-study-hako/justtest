@@ -17,9 +17,7 @@ public class ServiceImpl implements ServiceS {
   // 리뷰 생성
   @Override
   public void createReview(CreateRequestDto createRequestDto) {
-    System.out.println("2222");
     EntityR entity = new EntityR(createRequestDto);
-    System.out.println("3333");
     repository.save(entity);
   }
 
