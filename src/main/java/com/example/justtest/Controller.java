@@ -50,17 +50,5 @@ public class Controller {
     return CommonResponse.ok(service.getReview(reviewId));
   }
 
-  // 리뷰 조회 전체
-  @GetMapping
-  public ResponseEntity<CommonResponse<List<GetReviewResponseDto>>> getReviews() {
-    return CommonResponse.ok(service.getMyReviews());
-  }
-
-  // 상점의 리뷰 조회 전체
-  @GetMapping("/{shopId}")
-  public ResponseEntity<CommonResponse<List<GetReviewResponseDto>>> getReviews(
-      @PathVariable Long shopId) {
-    return CommonResponse.ok(service.getShopReviews(shopId));
-  }
 
 }
