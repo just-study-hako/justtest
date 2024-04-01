@@ -3,9 +3,8 @@ package com.example.justtest;
 import com.example.justtest.dto.CreateRequestDto;
 import com.example.justtest.dto.GetReviewResponseDto;
 import com.example.justtest.dto.UpdateRequestDto;
-import java.util.List;
 
-public interface Service {
+public interface ServiceS {
 
   void createReview(CreateRequestDto createRequestDto);
 

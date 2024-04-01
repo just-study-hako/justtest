@@ -3,7 +3,6 @@ package com.example.justtest;
 import com.example.justtest.dto.CreateRequestDto;
 import com.example.justtest.dto.GetReviewResponseDto;
 import com.example.justtest.dto.UpdateRequestDto;
-import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -20,12 +19,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 @RequestMapping("/api/reviews")
 public class Controller {
-  Service service;
+  private final  ServiceS service;
 
   // 리뷰 생성
   @PostMapping
   public void createReviews(
       @RequestBody CreateRequestDto CreateRequestDto) {
+    System.out.println("1111");
     service.createReview(CreateRequestDto);
   }
 

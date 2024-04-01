@@ -3,24 +3,23 @@ package com.example.justtest;
 import com.example.justtest.dto.CreateRequestDto;
 import com.example.justtest.dto.GetReviewResponseDto;
 import com.example.justtest.dto.UpdateRequestDto;
-import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
-import java.util.List;
-import java.util.Objects;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
 @Transactional
-public class ServiceImpl implements com.example.justtest.Service {
+public class ServiceImpl implements ServiceS {
 
   private final Repository repository;
 
   // 리뷰 생성
   @Override
   public void createReview(CreateRequestDto createRequestDto) {
+    System.out.println("2222");
     EntityR entity = new EntityR(createRequestDto);
+    System.out.println("3333");
     repository.save(entity);
   }
 
