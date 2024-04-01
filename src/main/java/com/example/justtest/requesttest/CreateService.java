@@ -1,7 +1,5 @@
 package com.example.justtest.requesttest;
 
-import com.example.justtest.EntityR;
-import com.example.justtest.dto.CreateRequestDto;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

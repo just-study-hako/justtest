@@ -1,6 +1,5 @@
 package com.example.justtest.requesttest;
 
-import com.example.justtest.dto.CreateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

@@ -1,6 +1,6 @@
 package com.example.justtest.alarm;
 
-import com.example.justtest.Repository;
+import com.example.justtest.reviewcrud.Repository;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;

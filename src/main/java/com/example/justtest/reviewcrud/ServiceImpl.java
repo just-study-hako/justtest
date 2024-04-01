@@ -1,8 +1,8 @@
-package com.example.justtest;
+package com.example.justtest.reviewcrud;
 
-import com.example.justtest.dto.CreateRequestDto;
-import com.example.justtest.dto.GetReviewResponseDto;
-import com.example.justtest.dto.UpdateRequestDto;
+import com.example.justtest.reviewcrud.dto.CreateRequestDto;
+import com.example.justtest.reviewcrud.dto.GetReviewResponseDto;
+import com.example.justtest.reviewcrud.dto.UpdateRequestDto;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

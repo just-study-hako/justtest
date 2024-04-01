@@ -1,8 +1,8 @@
-package com.example.justtest;
+package com.example.justtest.reviewcrud;
 
-import com.example.justtest.dto.CreateRequestDto;
-import com.example.justtest.dto.GetReviewResponseDto;
-import com.example.justtest.dto.UpdateRequestDto;
+import com.example.justtest.reviewcrud.dto.CreateRequestDto;
+import com.example.justtest.reviewcrud.dto.GetReviewResponseDto;
+import com.example.justtest.reviewcrud.dto.UpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 @RequestMapping("/api/reviews")
 public class Controller {
-  private final  ServiceS service;
+  private final ServiceS service;
 
   // 리뷰 생성
   @PostMapping

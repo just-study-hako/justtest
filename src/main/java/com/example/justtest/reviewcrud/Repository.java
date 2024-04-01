@@ -1,4 +1,4 @@
-package com.example.justtest;
+package com.example.justtest.reviewcrud;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

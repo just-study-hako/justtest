@@ -1,6 +1,6 @@
-package com.example.justtest.dto;
+package com.example.justtest.reviewcrud.dto;
 
-import com.example.justtest.EntityR;
+import com.example.justtest.reviewcrud.EntityR;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;

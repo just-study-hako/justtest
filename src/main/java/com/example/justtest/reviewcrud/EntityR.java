@@ -1,7 +1,7 @@
-package com.example.justtest;
+package com.example.justtest.reviewcrud;
 
-import com.example.justtest.dto.CreateRequestDto;
-import com.example.justtest.dto.UpdateRequestDto;
+import com.example.justtest.reviewcrud.dto.CreateRequestDto;
+import com.example.justtest.reviewcrud.dto.UpdateRequestDto;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

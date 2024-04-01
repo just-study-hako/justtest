@@ -1,4 +1,4 @@
-package com.example.justtest.dto;
+package com.example.justtest.reviewcrud.dto;
 
 import lombok.Getter;
 
