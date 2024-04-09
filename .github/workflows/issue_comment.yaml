@@ -7,10 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: pr comment
-        run: ${{ github.event.issue.pull_request }}
+        run: echo ${{ github.event.issue.pull_request }}
   issue-comment:
     if: ${{ !github.event.issue.pull_request }}
     runs-on: ubuntu-latest
     steps:
       - name: issue comment
-        run: ${{ github.event.issue.pull_request }}
+        run: echo ${{ github.event.issue.pull_request }}
