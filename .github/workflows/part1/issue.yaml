@@ -12,4 +12,4 @@ jobs:
       - name: step2
         run: |
           echo hello world
-          echo github action1
+          echo github action
