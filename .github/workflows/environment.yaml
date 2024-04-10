@@ -9,3 +9,12 @@ jobs:
         run: |
           echo ${{ vars.LEVEL }}
           echo ${{ secrets.KEY }}
+
+  get-env-test:
+    runs-on: ubuntu-latest
+    environment: env-test
+    steps:
+      - name: check env & secret
+        run: |
+          echo ${{ vars.LEVEL }}
+          echo ${{ secrets.KEY }}
